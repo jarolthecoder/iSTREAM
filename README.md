@@ -1,6 +1,6 @@
-# EntertainmentApp
+# iStream - Angular Entertainment Web App
+This project was originally a challenge from <a href="https://www.frontendmentor.io/">FrondenMentor</a> all assets were downloaded from the site. To be able to display all the media data online I have built my own API using <a href="https://mockapi.io/">MockAPI</a>.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
 
 ## Development server
 

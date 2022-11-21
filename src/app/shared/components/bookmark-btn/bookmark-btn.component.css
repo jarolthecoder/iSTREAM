@@ -1,0 +1,35 @@
+.bookmark {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    background: var(--clr-dark-blue);
+    opacity: 0.75;
+    z-index: 1;
+}
+
+.bookmark svg > path {
+    transform: rotate(1deg);
+}
+
+.bookmark:active {
+    animation: pulse 1s;
+}
+
+@keyframes pulse {
+    0% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
+@media screen and (max-width: 500px) {
+    .bookmark {
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+}
+

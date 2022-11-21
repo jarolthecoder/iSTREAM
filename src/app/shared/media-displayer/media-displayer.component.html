@@ -1,0 +1,17 @@
+<!-- Search Bar -->
+<app-search-bar 
+    (onSearch)="search($event)"
+    (onDebounce)="suggest($event)"
+></app-search-bar>
+ <!-- Media Display -->
+<section class="media-holder">
+    <router-outlet *ngIf="!shared.resultBlock; else searchResults"></router-outlet>
+    <!-- Search Results Display -->
+    <ng-template #searchResults>
+        <app-search-results 
+            class="animate__animated animate__fadeIn"
+            [mediaResults]="mediaResults"
+            [searchTitle]="searchTitle">
+        </app-search-results>
+    </ng-template>
+</section>

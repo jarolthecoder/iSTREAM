@@ -1,0 +1,34 @@
+<div class="component-wrap">
+    <h2>{{ title }}</h2>
+    <div class="media-grid-container animate__animated animate__fadeIn">
+        <div class="media-card" *ngFor="let item of tvSeries">
+            <figure class="media-item">
+                <img [src]="item.thumbnail.regular.large" alt="" class="media-img">
+                <!-- Play Button -->
+                <app-play-btn class="play-btn-container"></app-play-btn>
+                <!-- Bookmark Button -->
+                <app-bookmark-btn 
+                    (onSavedMedia)="saveMedia(item)" 
+                    [ngClass]="{'saved': item.isBookmarked}">
+                </app-bookmark-btn>
+                <div class="media-layer"></div>
+            </figure>
+            <div class="media-description">
+                <p class="media-details">
+                    <span class="year">{{ item.year }}</span>
+                    <span class="dot">•</span>
+                    <span class="type">
+                        <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.689H5.448L7.068.722 6.132 0 4.2 2.345 2.268.017l-.936.705 1.62 1.967H0V12h12V2.689Zm-4.8 8.147h-6V3.853h6v6.983Zm3-2.328H9V7.344h1.2v1.164Zm0-2.328H9V5.016h1.2V6.18Z" fill="#FFF" opacity=".75"/>
+                        </svg>
+                        {{ item.category }}
+                    </span>
+                    <span class="dot">•</span>
+                    <span class="age-rate">{{ item.rating | uppercase }}</span>
+                </p>
+                <h3 class="media-title">{{ item.title | titlecase }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+

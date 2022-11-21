@@ -1,0 +1,21 @@
+:host {
+    position: relative;
+}
+.media-holder {
+    padding-top: 2rem;
+}
+
+.suggested-list {
+    position: absolute;
+    top: 3rem;
+    width: calc(100% - 128px);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.182);
+    background: var(--clr-semi-dark-blue);
+    z-index: 5;
+}
+
+.suggested-item {
+    color: var(--clr-white);
+}

@@ -1,0 +1,9 @@
+.media-grid-container { 
+    width: calc(100% - 128px) 
+}
+
+@media screen and (max-width: 500px) {
+    .media-grid-container { 
+        width: 100%; 
+    }
+}

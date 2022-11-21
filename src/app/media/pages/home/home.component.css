@@ -1,0 +1,14 @@
+.trending-displayer {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.trending-displayer::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    h2 {
+        padding-left: 0.5rem;
+    }
+}

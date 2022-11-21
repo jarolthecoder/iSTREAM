@@ -1,1 +1,227 @@
-/* You can add global styles to this file, and also import other style files */
+/* Imported Font: 'Outfit'; Weight: 300, 400, 600; */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --clr-dark-blue: #10141E; /* #0c0e14 */
+    --clr-semi-dark-blue: #161D2F; /* #191b21 */
+    --clr-greyish-blue: #5A698F; /* #9a9a9a */
+    --clr-red: #FC4747;
+    --clr-white: #FFFFFF;
+
+    --ff-body: 'Outfit', sans-serif;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 600;
+
+    --fs-small: 0.813rem;
+    --fs-regular: 0.938rem;
+    --fs-medium: 1.125rem;
+    --fs-large: 1.5rem;
+    --fs-xlarge: 2rem;
+}
+
+/* General CSS Reset */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--ff-body);
+}
+
+figure {
+    border-radius: 0.2rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 0.2rem;
+}
+
+input,
+button {
+    border: none;
+    font: inherit;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Fonts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input {
+    font-weight: var(--fw-regular);
+    color: var(--clr-white);
+}
+
+h2 {
+    letter-spacing: 0.7px;
+}
+
+.scroll-container h3 {
+    font-size: var(--fs-large);
+}
+
+h4 {
+    font-size: var(--fs-medium);
+}
+
+/* Custom Scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--clr-semi-dark-blue)
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d13b3b;
+  border-radius: 2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-red);
+}
+
+/* Globlal Styles ======================================================================================== */
+/* Media Grid Display, Layout, Buttons  */
+.media-grid-container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    padding: 2rem 0;
+    width: 100%;
+    scroll-snap-type: mandatory;
+    scroll-snap-type: y mandatory;
+}
+
+.media-card {
+    scroll-snap-align: start;
+}
+
+.media-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.media-description {
+    padding: 1rem 0;
+}
+
+.media-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.1rem;
+    background: var(--clr-dark-blue);
+    opacity: 0.2;
+}
+
+.media-item:hover .media-layer {
+    opacity: 0.8;
+    transition: opacity ease 0.2s;
+}
+
+.media-details {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.media-details {
+    display: flex;
+    gap: 0.5rem;
+    color: var(--clr-white);
+    font-size: var(--fs-small);
+    opacity: 0.75;
+}
+
+.media-title,
+.scroll-container .media-details {
+    font-size: var(--fs-regular);
+}
+
+.play-btn-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.play-btn {
+    width: 7rem;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 0.5rem;
+    font-size: var(--fs-medium);
+    color: var(--clr-white);
+    background: #ffffff7c;
+    border-radius: 5rem;
+}
+
+.media-item:hover .play-btn-container {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity ease 0.2s;
+}
+
+.media-item:hover .bookmark {
+    opacity: 0.85;
+    transition: opacity ease 0.2s;
+}
+
+/* Bookmark icon toggle class if media is saved */
+.saved button svg > path{
+    fill: var(--clr-white)
+}
+
+@media screen and (max-width: 500px) {
+    .scroll-container h3 {
+        font-size: var(--fs-medium);
+    }
+
+    .media-grid-container {
+        grid-gap: 0.5rem;
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        padding: 2rem 0 0 0;
+    }
+    .component-wrap {
+        padding: 0 0.5rem;
+    }
+
+    .play-btn {
+        width: auto;
+    }
+}
