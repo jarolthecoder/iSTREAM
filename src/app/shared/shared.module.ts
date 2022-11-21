@@ -8,6 +8,7 @@ import { PlayBtnComponent } from './components/play-btn/play-btn.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MediaDisplayerComponent } from './media-displayer/media-displayer.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 
 
@@ -21,14 +22,16 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     MediaDisplayerComponent,
     SearchBarComponent,
     PlayBtnComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    SpinnerComponent
   ],
   exports: [
     SidebarComponent,
     BookmarkBtnComponent,
     MediaDisplayerComponent,
     SearchBarComponent,
-    PlayBtnComponent
+    PlayBtnComponent,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,

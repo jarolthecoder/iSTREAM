@@ -5,6 +5,16 @@ import { Injectable } from '@angular/core';
 })
 export class SharedService {
   resultBlock: boolean = false; // Display block on search
+  private loading: boolean = false;
+
   constructor() { }
+
+  setLoading(loading: boolean) {
+    this.loading = loading;
+  }
+
+  getLoading(): boolean {
+    return this.loading;
+  }
 
 }
