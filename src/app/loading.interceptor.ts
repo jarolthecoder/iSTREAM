@@ -12,7 +12,6 @@ export class LoadingInterceptor implements HttpInterceptor {
   constructor(private shared: SharedService) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    console.log('caught')
     this.totalRequests++;
     this.shared.setLoading(true);
     return next.handle(request).pipe(

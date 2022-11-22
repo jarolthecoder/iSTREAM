@@ -10,7 +10,7 @@ import { MediaService } from '../../services/media.service';
 export class RecommendedComponent implements OnInit {
   title      : string = 'Recommended for you';
   recommended: EntertainmentData[] = [];
-  
+
   constructor(private mediaService: MediaService) { }
 
   ngOnInit(): void {

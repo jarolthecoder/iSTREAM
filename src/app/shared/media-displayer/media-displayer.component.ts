@@ -14,10 +14,14 @@ export class MediaDisplayerComponent implements OnInit {
   mediaResults: EntertainmentData[] = [];
   mediaSuggested: EntertainmentData[] = [];
   searchTitle: string = '';
+  public innerWidth: any;
 
   constructor( private mediaService: MediaService, public shared: SharedService ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
+    console.log(this.innerWidth)
+  }
 
   search(title: string) {
     this.mediaService.searchMedia(title).subscribe( data => {

@@ -5,7 +5,6 @@
 ></app-search-bar>
  <!-- Media Display -->
 <section class="media-holder">
-    <app-spinner></app-spinner>
     <router-outlet *ngIf="!shared.resultBlock; else searchResults"></router-outlet>
     <!-- Search Results Display -->
     <ng-template #searchResults>

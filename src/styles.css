@@ -140,13 +140,12 @@ h4 {
     width: 100%;
     height: 100%;
     border-radius: 0.1rem;
-    background: var(--clr-dark-blue);
-    opacity: 0.2;
+    background: linear-gradient(#0000001a, #0000001a);
+    z-index: 1;
 }
 
 .media-item:hover .media-layer {
-    opacity: 0.8;
-    transition: opacity ease 0.2s;
+    background: linear-gradient(#00000089, #00000089);
 }
 
 .media-details {
@@ -160,6 +159,7 @@ h4 {
     color: var(--clr-white);
     font-size: var(--fs-small);
     opacity: 0.75;
+
 }
 
 .media-title,
@@ -174,7 +174,7 @@ h4 {
     transform: translate(-50%, -50%);
     opacity: 0;
     visibility: hidden;
-    z-index: 1;
+    z-index: 2;
 }
 
 .play-btn {
@@ -196,6 +196,7 @@ h4 {
     opacity: 1;
     transition: opacity ease 0.2s;
 }
+
 
 .media-item:hover .bookmark {
     opacity: 0.85;
@@ -223,5 +224,15 @@ h4 {
 
     .play-btn {
         width: auto;
+    }
+
+    .media-item:focus .media-layer {
+        background: linear-gradient(#00000089, #00000089);
+    }
+    
+    .media-item:focus .play-btn-container {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity ease 0.2s;
     }
 }

@@ -14,8 +14,8 @@ export class TvseriesBookmarkedComponent {
   constructor(private mediaService: MediaService) { }
 
   saveMedia(media: EntertainmentData) {
+    const index = this.savedTVSeries.indexOf(media);
     this.mediaService.saveMedia(media).subscribe();
-    this.updateDisplay();
+    this.savedTVSeries.splice(index, 1);
   }
-
 }

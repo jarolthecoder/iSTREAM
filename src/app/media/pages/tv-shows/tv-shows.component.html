@@ -3,15 +3,16 @@
     <div class="media-grid-container animate__animated animate__fadeIn">
         <div class="media-card" *ngFor="let item of tvSeries">
             <figure class="media-item">
-                <img [src]="item.thumbnail.regular.large" alt="" class="media-img">
-                <!-- Play Button -->
-                <app-play-btn class="play-btn-container"></app-play-btn>
+                <img [src]="item.thumbnail.regular.large" alt="" class="media-img" loading="lazy">
+                <div class="media-layer" onclick="">
+                    <!-- Play Button -->
+                    <app-play-btn class="play-btn-container"></app-play-btn>
+                </div>
                 <!-- Bookmark Button -->
                 <app-bookmark-btn 
                     (onSavedMedia)="saveMedia(item)" 
                     [ngClass]="{'saved': item.isBookmarked}">
                 </app-bookmark-btn>
-                <div class="media-layer"></div>
             </figure>
             <div class="media-description">
                 <p class="media-details">

@@ -14,7 +14,8 @@ export class MoviesBookmarkedComponent {
   constructor(private mediaService: MediaService) { }
 
   saveMedia(media: EntertainmentData) {
+    const index = this.savedMovies.indexOf(media);
     this.mediaService.saveMedia(media).subscribe();
-    this.updateDisplay();
+    this.savedMovies.splice(index, 1);
   }
 }
