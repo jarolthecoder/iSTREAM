@@ -4,7 +4,7 @@
         <ng-template #notFound><span >No results found for </span></ng-template>
         "{{ searchTitle | titlecase }}"
     </h2>
-    <div class="media-grid-container">
+    <div class="media-grid-container animate__animated animate__fadeIn">
         <div class="media-card" *ngFor="let item of mediaResults">
             <figure class="media-item" onclick="">
                 <img [src]="item.thumbnail.regular.large" alt="" class="media-img" loading="lazy">
