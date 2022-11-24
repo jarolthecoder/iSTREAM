@@ -1,9 +1,12 @@
+<!-- Loading spinner -->
+<app-spinner *ngIf="this.loading"></app-spinner>
 <!-- Trending Display -->
-<section class="trending-displayer">
-    <h2>{{ title }}</h2>
-    <app-trending></app-trending>
+<h2>{{ titleTrending }}</h2>
+<section class="trending-displayer animate__animated animate__fadeIn">
+    <app-trending [trending]="trending" [updateDisplay]="updateDisplay"></app-trending>
 </section>
 <!-- Recommended Display -->
-<section class="recommended-displayer component-wrap">
-    <app-recommended></app-recommended>
+<h2>{{ titleRecommended }}</h2>
+<section class="recommended-displayer component-wrap animate__animated animate__fadeIn">
+    <app-recommended [recommended]="recommended" [updateDisplay]="updateDisplay"></app-recommended>
 </section>

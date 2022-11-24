@@ -1,5 +1,7 @@
 <div class="component-wrap">
     <h2>{{ title }}</h2>
+    <!-- Loading spinner -->
+    <app-spinner *ngIf="this.loading"></app-spinner>
     <div class="media-grid-container animate__animated animate__fadeIn">
         <div class="media-card" *ngFor="let item of tvSeries">
             <figure class="media-item">

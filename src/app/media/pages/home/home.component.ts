@@ -1,13 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { EntertainmentData } from '../../interface/media';
+import { MediaService } from '../../services/media.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-  title: string = 'Trending';
+export class HomeComponent implements OnInit {
+  titleTrending   : string = 'Trending';
+  titleRecommended: string = 'Recommended for you';
+  trending        : EntertainmentData[] = [];
+  recommended     : EntertainmentData[] = [];
+  loading         : boolean = true;
+  // Function passed as Input to child components: trending, recommended
+  updateDisplay =  (): void => { 
+    this.getMedia(); 
+  }
   
-  constructor() { }
+  constructor(private mediaService: MediaService) { }
 
+  ngOnInit(): void { }
+
+  getMedia() {
+    this.mediaService.getMedia().subscribe( data => {
+      const recommended = data.filter(media => !media.isTrending);
+      const trending = data.filter(media => media.isTrending);
+      
+      this.recommended = recommended;
+      this.trending = trending;
+      this.loading = false;
+    });
+  }
 }

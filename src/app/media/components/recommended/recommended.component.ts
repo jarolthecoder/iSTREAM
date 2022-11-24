@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { EntertainmentData } from '../../interface/media';
 import { MediaService } from '../../services/media.service';
 
@@ -8,24 +8,16 @@ import { MediaService } from '../../services/media.service';
   styleUrls: ['./recommended.component.css'] 
 })
 export class RecommendedComponent implements OnInit {
-  title      : string = 'Recommended for you';
-  recommended: EntertainmentData[] = [];
+  @Input() recommended: EntertainmentData[] = [];
+  @Input() updateDisplay!: ()=> void;
 
   constructor(private mediaService: MediaService) { }
 
   ngOnInit(): void {
-    this.updateDisplay();
-  }
-
-  updateDisplay() {
-    this.mediaService.getMedia().subscribe(data =>  {
-      const result = data.filter(media => !media.isTrending);
-      this.recommended = result;
-    });
+    this.updateDisplay()
   }
 
   saveMedia(media: EntertainmentData) {
     this.mediaService.saveMedia(media).subscribe();
   }
-
 }

@@ -7,8 +7,9 @@ import { MediaService } from '../../services/media.service';
   templateUrl: './tv-shows.component.html'
 })
 export class TvShowsComponent implements OnInit {
-  title: string = 'TV Series';
+  title   : string = 'TV Series';
   tvSeries: EntertainmentData[] = [];
+  loading : boolean = true;
 
   constructor(private mediaService: MediaService) {}
 
@@ -20,6 +21,7 @@ export class TvShowsComponent implements OnInit {
     this.mediaService.getMedia().subscribe(data =>  {
       const result = data.filter(media => media.category === 'TV Series');
       this.tvSeries = result;
+      this.loading = false;
     });
   }
 

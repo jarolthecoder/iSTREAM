@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { EntertainmentData } from '../../interface/media';
 import { MediaService } from '../../services/media.service';
 
@@ -8,19 +8,13 @@ import { MediaService } from '../../services/media.service';
   styleUrls: ['./trending.component.css']
 })
 export class TrendingComponent implements OnInit {
-  trending: EntertainmentData[] = [];
+  @Input() trending: EntertainmentData[] = [];
+  @Input() updateDisplay!: ()=> void;
 
   constructor(private mediaService: MediaService) {}
 
   ngOnInit(): void {
     this.updateDisplay();
-  }
-
-  updateDisplay() {
-    this.mediaService.getMedia().subscribe(data =>  {
-      const result = data.filter(media => media.isTrending);
-      this.trending = result;
-    });
   }
 
   saveMedia(media: EntertainmentData) {
