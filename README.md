@@ -7,7 +7,7 @@ This project was originally a challenge from <a href="https://www.frontendmentor
 ## Functionalities
 <ul>
     <li>Input validation check, if input is empty search does not fire</li>
-    <li>Media search results update in real time while user is typing</li>
+    <li>Display results in real time while user is typing on search bar</li>
     <li>Displays trending and recommended movies/TVSeries</li>
     <li>Search movies/TVSeries on user input</li>
     <li>Bookmark and save media</li>
