@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 1.5rem;
+    gap: 1rem;
     padding: 2rem 0 2rem 0.5rem;
     width: 200%;
     scroll-snap-align: start;
@@ -12,6 +12,11 @@
     width: 29.375rem;
     position: relative;
     cursor: pointer;
+}
+@media (width <= 500px) {
+    .scroll-container .media-item {
+        height: 150px;
+    }
 }
 
 .scroll-container .media-description {
@@ -36,7 +41,7 @@
     background: linear-gradient(#00000049, #000000d7);
 }
 
-@media screen and (max-width: 500px) {
+@media (width <= 800px) {
     .scroll-container {
         gap: 0.5rem;
         width: 380%;
@@ -51,12 +56,14 @@
         grid-template-columns: repeat(2, minmax(150px, 1fr));
     }
 
-    .scroll-container .media-item {
-        height: 150px;
-    }
-
     .scroll-container .media-img {
         object-fit: cover;
         height: 100%; 
+    }
+}
+
+@media (1700px <= width) {
+    .scroll-container {
+        width: 125%;
     }
 }

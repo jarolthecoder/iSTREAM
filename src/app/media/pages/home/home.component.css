@@ -7,7 +7,7 @@
     display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media (width <= 800px) {
     h2 {
         padding-left: 0.5rem;
     }

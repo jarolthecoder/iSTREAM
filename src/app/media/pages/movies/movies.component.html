@@ -1,11 +1,9 @@
 <div class="component-wrap">
     <h2>{{ title }}</h2>
-    <!-- Loading spinner -->
-    <app-spinner *ngIf="this.loading"></app-spinner>
-    <div class="media-grid-container animate__animated animate__fadeIn">
-        <div class="media-card" *ngFor="let item of movies">
+    <div class="media-grid-container">
+        <div class="media-cardn" *ngFor="let item of movies">
             <figure class="media-item" onclick="">
-                <img [src]="item.thumbnail.regular.large" width="auto" height="auto" class="media-img" priority>
+                <img [src]="item.thumbnail.regular.large" class="animate__animated animate__fadeIn">
                 <div class="media-layer">
                      <!-- Play Button -->
                     <app-play-btn class="play-btn-container"></app-play-btn>

@@ -2,7 +2,7 @@
     width: calc(100% - 128px) 
 }
 
-@media screen and (max-width: 500px) {
+@media (width <= 800px) {
     .media-grid-container { 
         width: 100%; 
     }

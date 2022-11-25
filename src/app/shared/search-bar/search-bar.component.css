@@ -47,9 +47,9 @@
   opacity: 1;
 }
 
-@media screen and (max-width: 500px) {
+@media (width <= 1000px) {
   #search-bar {
-      width: calc(100% - 15px);
+    width: calc(100% - 15px);
     padding-left: 0.5rem;
   }
 }

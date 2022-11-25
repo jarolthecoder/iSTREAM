@@ -4,7 +4,8 @@ import { MediaService } from '../../services/media.service';
 
 @Component({
   selector: 'app-tvseries-bookmarked',
-  templateUrl: './tvseries-bookmarked.component.html'
+  templateUrl: './tvseries-bookmarked.component.html',
+  styles: [` @media (width <= 800px){ h2 { padding-top: 2rem; } }`]
 })
 export class TvseriesBookmarkedComponent {
   tvseriesTitle          : string = 'Bookmarked TV Series';

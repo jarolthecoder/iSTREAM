@@ -9,7 +9,6 @@ import { MediaService } from '../../services/media.service';
 export class MoviesComponent implements OnInit {
   title  : string = 'Movies';
   movies : EntertainmentData[] = [];
-  loading: boolean = true;
 
   constructor(private mediaService: MediaService) {}
 
@@ -21,7 +20,6 @@ export class MoviesComponent implements OnInit {
     this.mediaService.getMedia().subscribe(data =>  {
       const result = data.filter(media => media.category === 'Movie');
       this.movies = result;
-      this.loading = false;
     });
   }
 

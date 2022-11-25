@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
   titleRecommended: string = 'Recommended for you';
   trending        : EntertainmentData[] = [];
   recommended     : EntertainmentData[] = [];
-  loading         : boolean = true;
   // Function passed as Input to child components: trending, recommended
   updateDisplay =  (): void => { 
     this.getMedia(); 
@@ -29,7 +28,6 @@ export class HomeComponent implements OnInit {
       
       this.recommended = recommended;
       this.trending = trending;
-      this.loading = false;
     });
   }
 }
