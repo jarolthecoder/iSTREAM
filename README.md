@@ -1,5 +1,5 @@
 # iSTREAM - Angular Entertainment Web App
-Live we application: <a href="https://phenomenal-kulfi-f493f3.netlify.app/">Click Here</a></p>
+Live web application: <a href="https://phenomenal-kulfi-f493f3.netlify.app/">Click Here</a></p>
 
 ## About the project
 This project was originally a challenge from <a href="https://www.frontendmentor.io/">FrondenMentor</a>, all assets were downloaded from the site. To be able to display all the media data online, I have built my own API using <a href="https://mockapi.io/">MockAPI</a>. Currently I am working on a login/sign-up feature to add, if you are a backend or fullstack developer and you would like to team up and work together on this funcionality, feel free to message me 🤙.
