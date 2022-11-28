@@ -3,7 +3,13 @@
     <div class="media-grid-container">
         <div class="media-cardn" *ngFor="let item of movies">
             <figure class="media-item" onclick="">
-                <img [src]="item.thumbnail.regular.large" class="animate__animated animate__fadeIn">
+                <img 
+                    *ngIf="!this.isLoaded; else loadingImg" 
+                    [src]="item.thumbnail.regular.large" 
+                    class="animate__animated animate__fadeIn">
+                <ng-template #loadingImg>
+                    <img src="../../../../assets/media-bg.svg" class="mock-img">
+                </ng-template>
                 <div class="media-layer">
                      <!-- Play Button -->
                     <app-play-btn class="play-btn-container"></app-play-btn>

@@ -2,12 +2,14 @@
     <h2 *ngIf="savedMovies.length === 0 && savedTVSeries.length === 0 ">Your list is empty</h2>
     <!-- Bookmarked Movies Display -->
     <app-movies-bookmarked 
-        [savedMovies]="savedMovies" 
+        [savedMovies]="savedMovies"
+        [isLoaded]="isLoaded" 
         [updateDisplay]="updateDisplay">
     </app-movies-bookmarked>
     <!-- Bookmarked TV Series Display -->
     <app-tvseries-bookmarked 
         [savedTVSeries]="savedTVSeries" 
+        [isLoaded]="isLoaded" 
         [updateDisplay]="updateDisplay">
     </app-tvseries-bookmarked>
 </div>

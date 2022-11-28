@@ -8,8 +8,9 @@ import { MediaService } from '../../services/media.service';
   styleUrls: ['./trending.component.css']
 })
 export class TrendingComponent implements OnInit {
-  @Input() trending: EntertainmentData[] = [];
-  @Input() updateDisplay!: ()=> void;
+  @Input() trending      : EntertainmentData[] = [];
+  @Input() isLoaded!     : boolean;
+  @Input() updateDisplay!: () => void;
 
   constructor(private mediaService: MediaService) {}
 

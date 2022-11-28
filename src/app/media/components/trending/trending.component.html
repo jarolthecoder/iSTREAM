@@ -1,6 +1,12 @@
 <div class="scroll-container">
     <figure *ngFor="let item of trending" class="media-item" onclick="">
-        <img [src]="item.thumbnail.trending?.large" class="media-img animate__animated animate__fadeIn">
+        <img 
+            *ngIf="!this.isLoaded; else loadingImg" 
+            [src]="item.thumbnail.trending?.large" 
+            class="media-img animate__animated animate__fadeIn">
+        <ng-template #loadingImg>
+            <img src="../../../../assets/media-trending-bg.svg" class="mock-img">
+        </ng-template>
         <figcaption class="media-description">
             <p class="media-details">
                 <span class="year">{{ item.year }}</span>

@@ -13,4 +13,5 @@ This project was originally a challenge from <a href="https://www.frontendmentor
     <li>Search movies/TVSeries on user input</li>
     <li>Bookmark and save media toggle</li>
     <li>Reset button for 'Trending' slider position</li>
+    <li>Loading template for images</li>
 </ul>

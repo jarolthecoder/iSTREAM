@@ -140,7 +140,7 @@ h4 {
     height: 100%;
     position: relative;
     background: #50535a;
-    background-image: linear-gradient(to right, #656871ab 0%, #888b94 20%, #656871 40%, #656871 100%);
+    background-image: linear-gradient(to right, #656871 0%, #888b94 20%, #656871 40%, #656871 100%);
     background-size: 200% 100%;
     animation: gradient;
     animation-duration: 1.3s;

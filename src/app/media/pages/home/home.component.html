@@ -3,6 +3,7 @@
 <section class="trending-displayer">
     <app-trending 
         [trending]="trending" 
+        [isLoaded]="isLoaded" 
         [updateDisplay]="updateDisplay">
     </app-trending>
 </section>
@@ -11,6 +12,7 @@
 <section class="recommended-displayer component-wrap">
     <app-recommended 
         [recommended]="recommended"
+        [isLoaded]="isLoaded" 
         [updateDisplay]="updateDisplay">
     </app-recommended>
 </section>

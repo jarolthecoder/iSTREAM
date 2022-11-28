@@ -10,6 +10,7 @@ export class SavedComponent implements OnInit {
   tvseriesTitle: string = 'Bookmarked TV Series';
   savedMovies  : EntertainmentData[] = [];
   savedTVSeries: EntertainmentData[] = [];
+  isLoaded     : boolean = true;
   // Function passed as Input to child components: bookmarked-movies, bookmarked-tvseries
   updateDisplay =  (): void => { 
     this.getMedia(); 
@@ -28,6 +29,7 @@ export class SavedComponent implements OnInit {
       
       this.savedMovies = resultMovies;
       this.savedTVSeries = resultTVSeries;
+      setTimeout(()=> this.isLoaded = false, 300);
     });
   }
 

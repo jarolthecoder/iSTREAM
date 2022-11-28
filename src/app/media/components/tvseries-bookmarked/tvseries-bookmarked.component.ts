@@ -10,6 +10,7 @@ import { MediaService } from '../../services/media.service';
 export class TvseriesBookmarkedComponent {
   tvseriesTitle          : string = 'Bookmarked TV Series';
   @Input() savedTVSeries : EntertainmentData[] = [];
+  @Input() isLoaded!      : boolean;
   @Input() updateDisplay!: ()=> void;
 
   constructor(private mediaService: MediaService) { }

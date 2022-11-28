@@ -13,11 +13,6 @@
     position: relative;
     cursor: pointer;
 }
-@media (width <= 500px) {
-    .scroll-container .media-item {
-        height: 150px;
-    }
-}
 
 .scroll-container .media-description {
     position: absolute;
@@ -39,6 +34,12 @@
 
 .scroll-container .media-item:hover .media-layer {
     background: linear-gradient(#00000049, #000000d7);
+}
+
+@media (width <= 500px) {
+    .scroll-container .media-item {
+        height: 165px;
+    }
 }
 
 @media (width <= 800px) {

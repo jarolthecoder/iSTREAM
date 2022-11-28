@@ -8,7 +8,8 @@ import { MediaService } from '../../services/media.service';
   styleUrls: ['./recommended.component.css'] 
 })
 export class RecommendedComponent implements OnInit {
-  @Input() recommended: EntertainmentData[] = [];
+  @Input() recommended   : EntertainmentData[] = [];
+  @Input() isLoaded!     : boolean;
   @Input() updateDisplay!: ()=> void;
 
   constructor(private mediaService: MediaService) { }

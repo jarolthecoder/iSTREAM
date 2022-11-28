@@ -9,6 +9,7 @@ import { MediaService } from '../../services/media.service';
 export class MoviesBookmarkedComponent {
   moviesTitle            : string = 'Bookmarked movies';
   @Input() savedMovies   : EntertainmentData[] = [];
+  @Input() isLoaded!      : boolean;
   @Input() updateDisplay!: ()=> void;
 
   constructor(private mediaService: MediaService) { }

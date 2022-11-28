@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   titleRecommended: string = 'Recommended for you';
   trending        : EntertainmentData[] = [];
   recommended     : EntertainmentData[] = [];
+  isLoaded        : boolean = true;
 
   // Function passed as Input to child components: trending, recommended
   updateDisplay =  (): void => { 
@@ -29,6 +30,7 @@ export class HomeComponent implements OnInit {
       
       this.recommended = recommended;
       this.trending = trending;
+      setTimeout(()=> this.isLoaded = false, 300);
     });
   }
 }
