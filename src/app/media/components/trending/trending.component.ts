@@ -20,5 +20,10 @@ export class TrendingComponent implements OnInit {
   saveMedia(media: EntertainmentData) {
     this.mediaService.saveMedia(media).subscribe();
   }
+
+  scrollReset() {
+    const scrollGrid = document.querySelector('.trending-displayer') as HTMLElement;
+    scrollGrid.scrollLeft = 0;
+  }
   
 }

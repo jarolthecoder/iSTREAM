@@ -9,6 +9,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { MediaDisplayerComponent } from './media-displayer/media-displayer.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { ScrollBtnComponent } from './components/scroll-btn/scroll-btn.component';
 
 
 
@@ -23,7 +24,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     SearchBarComponent,
     PlayBtnComponent,
     SearchResultsComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    ScrollBtnComponent
   ],
   exports: [
     SidebarComponent,
@@ -31,7 +33,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     MediaDisplayerComponent,
     SearchBarComponent,
     PlayBtnComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    ScrollBtnComponent
   ],
   imports: [
     CommonModule,

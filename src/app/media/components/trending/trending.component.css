@@ -3,8 +3,8 @@
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
-    padding: 2rem 0 2rem 0.5rem;
-    width: 200%;
+    padding: 2rem 0;
+    width: 190%;
     scroll-snap-align: start;
 }
 
@@ -45,15 +45,11 @@
     .scroll-container {
         gap: 0.5rem;
         width: 380%;
+        padding-left: 0.5rem;
     }
 
     .scroll-container h3 {
         font-size: var(--fs-medium);
-    }
-    
-    .media-grid-container {
-        grid-gap: 1rem;
-        grid-template-columns: repeat(2, minmax(150px, 1fr));
     }
 
     .scroll-container .media-img {

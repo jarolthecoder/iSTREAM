@@ -6,9 +6,11 @@ This project was originally a challenge from <a href="https://www.frontendmentor
 
 ## Functionalities
 <ul>
+    <li>Connects to mock API and returns media to each page based on its conditions: category, trending and bookmarked.</li>
     <li>Input validation check, if input is empty search does not fire</li>
     <li>Display results in real time while user is typing on search bar</li>
     <li>Displays trending and recommended movies/TVSeries</li>
     <li>Search movies/TVSeries on user input</li>
-    <li>Bookmark and save media</li>
+    <li>Bookmark and save media toggle</li>
+    <li>Reset button for 'Trending' slider position</li>
 </ul>
