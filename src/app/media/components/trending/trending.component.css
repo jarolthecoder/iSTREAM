@@ -45,7 +45,7 @@
 @media (width <= 800px) {
     .scroll-container {
         gap: 0.5rem;
-        width: 380%;
+        width: 430%;
         padding-left: 0.5rem;
     }
 
