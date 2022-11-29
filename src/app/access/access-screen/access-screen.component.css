@@ -64,7 +64,9 @@
 
 @media (width <= 500px) {
     #access-screen {
-        padding: 2rem 0;
+        padding: 5rem 0 0 0;
+        justify-content: flex-start;
+        height: 100%;
     }
     
     .access-btn {
