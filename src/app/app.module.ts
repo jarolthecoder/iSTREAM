@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { MediaModule } from './media/media.module';
 import { SharedModule } from './shared/shared.module';
 import { LoadingInterceptor } from './loading.interceptor';
+import { AccessModule } from './access/access.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LoadingInterceptor } from './loading.interceptor';
     AppRoutingModule,
     HttpClientModule,
     MediaModule,
-    SharedModule
+    SharedModule,
+    AccessModule
   ],
   providers: [ {
       provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true

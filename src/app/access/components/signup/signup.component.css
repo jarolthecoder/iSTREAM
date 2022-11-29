@@ -1,0 +1,49 @@
+.form-container {
+    width: 550px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: var(--clr-semi-dark-blue);
+}
+
+#sign-up-form {
+    padding: 1rem 0;
+}
+
+.input-container {
+    padding: 1rem 0;
+}
+
+#sign-up-form input {
+    width: 100%;
+    background: none;
+    padding: 1rem 1rem 0.5rem 0;
+    font-family: inherit;
+    border-radius: 0;
+    border-bottom: 2px solid var(--clr-greyish-blue);
+}
+
+.form-btn {
+    width: 100%;
+    padding: 1rem;
+    margin: 1.5rem 0 0 0;
+    border-radius: 0.2rem;
+    color: var(--clr-white);
+    background: var(--clr-red);
+}
+
+.form-msg {
+    margin: 0.5rem 0;
+    text-align: center;
+    color: var(--clr-white);
+}
+
+.form-link {
+    color: var(--clr-red);
+}
+
+@media (width <= 500px) {
+    .form-container {
+        width: 90%;
+    }
+}

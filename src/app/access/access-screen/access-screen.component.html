@@ -1,0 +1,21 @@
+<section id="access-screen">
+    <figure class="logo-container animate__animated animate__backInUp">
+        <img src="../../../assets/iSTREAM-logo.png" alt="" class="logo">
+        <figcaption>
+            <h3>Watch Anywhere, Anytime.</h3>
+        </figcaption>
+    </figure>
+    <div class="access-msg animate__animated animate__fadeIn  animate__delay-2s">
+        <button class="access-btn guest-btn" routerLink="" (click)="markGuest()">
+            Continue as a guest
+            <i class="fa-solid fa-user"></i>
+        </button>
+        <h4>Or</h4>
+        <button class="access-btn register-btn" [routerLink]="'signup'">
+            Register with an email
+            <i class="fa-solid fa-envelope"></i>
+        </button>
+        <p class="login-msg">Already have an account? <a href="" class="login-link">Login</a></p>
+    </div>
+</section>
+
