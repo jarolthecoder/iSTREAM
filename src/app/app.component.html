@@ -1,10 +1,12 @@
-<!-- Acces Screen -->
+<!-- Access Screen -->
 <app-access-screen *ngIf="!this.isGuest" [isGuest]="isGuest"></app-access-screen>
-<!-- Main Screen -->
+<!-- App Screen -->
 <main *ngIf="this.isGuest" id="main-content" class="row animate__animated animate__fadeIn">
+	<!-- Side Navigation -->
 	<aside class="col col-left">
 		<app-sidebar></app-sidebar>
 	</aside>
+	<!-- Media Displayer -->
 	<article class="col col-right">
 		<app-media-displayer></app-media-displayer>
 	</article>
