@@ -10,9 +10,8 @@ export class AppComponent implements OnInit {
   isGuest: boolean = false;
 
   ngOnInit(): void {
-    if (localStorage.getItem('Is Guest')) {
+    if (sessionStorage.getItem('Is Guest')) {
       this.isGuest = true;
     }
-    // localStorage.clear();
   }
 }

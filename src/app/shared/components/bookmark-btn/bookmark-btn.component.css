@@ -17,6 +17,16 @@
     transform: rotate(1deg);
 }
 
+.bookmark:hover {
+    background-color: var(--clr-white);
+    transition: background-color ease 0.2s;
+}
+
+.bookmark:hover svg > path {
+    stroke: var(--clr-dark-blue);
+    transition: stroke ease 0.2s;
+}
+
 .bookmark:active {
     animation: pulse 1s;
 }

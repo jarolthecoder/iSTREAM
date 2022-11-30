@@ -11,7 +11,7 @@ export class ScrollBtnComponent implements OnInit {
 
   ngOnInit(): void {
     if(document.readyState === 'complete' || document.readyState === "interactive") {
-      setTimeout(()=> this.loaded = true, 300);
+      setTimeout(()=> this.loaded = true, 1000);
     }
   }
 

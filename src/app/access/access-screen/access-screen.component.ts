@@ -14,7 +14,7 @@ export class AccessScreenComponent implements OnInit {
   }
 
   markGuest() {
-    localStorage.setItem('Is Guest', 'true');
+    sessionStorage.setItem('Is Guest', 'true');
     this.isGuest = true;
     window.location.reload()
   }
